@@ -1,0 +1,442 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  /* background-color: violet; */
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  top: 0px;
+  left: 10%;
+  animation: drop 1s ease-in;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.accordion-item {
+  background-color: #230046;
+  border-radius: 1.4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: -7px -7px 17px #580479, 6px 6px 8px #be6df5;
+}
+
+.accordion-link {
+  font-size: 1.6rem;
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: #320064;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 10px;
+}
+
+.accordion-link i {
+  color: whitesmoke;
+  padding: 0.5rem;
+}
+
+.accordion-link .fa-minus {
+  display: none;
+}
+
+.answer {
+  overflow: hidden;
+  max-height: 0;
+  position: relative;
+  background-color: #141414;
+  transition: max-height 650ms;
+  display: flex;
+}
+
+.answer::before {
+  content: "";
+  position: absolute;
+  width: 0.6rem;
+  height: 90%;
+  background-color: #ffffff;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.answer p {
+  color: whitesmoke;
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+
+.accordion-item:target .answer {
+  max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link .fa-plus {
+  display: none;
+}
+.accordion-item:target .accordion-link .fa-minus {
+  display: block;
+}
+
+.fa-minus:target .answer {
+  display: none;
+}
+
+.topics {
+  display: block;
+  position: relative;
+  left: 28%;
+  top: 15px;
+  animation: slide 1s 1;
+  z-index: 1;
+}
+@keyframes slide {
+  0% {
+    transform: translate3d(-200px, -200px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btn {
+  margin: 15px;
+  height: 60px;
+  border-radius: 20px;
+  width: 240px;
+  font-size: 23px;
+  position: sticky;
+  border-radius: 50px;
+}
+/* .heading {
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+  font-weight: 900;
+  animation: rotate 0.2s 2;
+} */
+/* @keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+.glowing {
+  font-family: "Dancing Script", cursive;
+  font-size: 27px;
+  font-weight: 900;
+  text-align: center;
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #282828 0%, #230046 74%);
+  box-shadow: -7px -7px 17px #ffffff, 6px 6px 8px #474747;
+  color: gray;
+  width: 240px;
+  border: 3px solid black;
+  border-radius: 12px;
+  height: 70px;
+  position: relative;
+  top: -2px;
+  left: -2px;
+}
+.glowing span {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  animation: animate 2s linear infinite;
+  position: relative;
+  left: 5px;
+  text-align: center;
+  font-size: 25px;
+  top: 13px;
+}
+.glowing span:nth-child(1) {
+  animation-delay: 0s;
+}
+.glowing span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.glowing span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.glowing span:nth-child(4) {
+  animation-delay: 0.75s;
+}
+.glowing span:nth-child(5) {
+  animation-delay: 1s;
+}
+.glowing span:nth-child(6) {
+  animation-delay: 1.25s;
+}
+.glowing span:nth-child(7) {
+  animation-delay: 1.5s;
+}
+.glowing span:nth-child(8) {
+  animation-delay: 1.75s;
+}
+.glowing span:nth-child(9) {
+  animation-delay: 2s;
+}
+.glowing span:nth-child(10) {
+  animation-delay: 2.25s;
+}
+.glowing span:nth-child(11) {
+  animation-delay: 2.5s;
+}
+.glowing span:nth-child(12) {
+  animation-delay: 2.75s;
+}
+@keyframes animate {
+  0%,
+  100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #f2e4fd, 0 0 20px #f2e4fd, 0 0 40px #f2e4fd,
+      0 0 80px #f2e4fd, 0 0 120px #f2e4fd, 0 0 200px #f2e4fd, 0 0 300px #f2e4fd;
+  }
+  5%,
+  95% {
+    color: #111;
+    filter: blur(0px);
+    text-shadow: 0 0 10px none;
+  }
+}
+
+.basics .glowing span {
+  position: relative;
+  left: 65px;
+}
+.others .glowing span {
+  position: relative;
+  left: 65px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: radial-gradient(rgba(79, 0, 128, 0.5) 0%, transparent 70%),
+    linear-gradient(#000308 40%, #000003 70%);
+  perspective: 700px;
+  font-size: clamp(10px, 2vw, 20px);
+}
+
+.lines {
+  position: fixed;
+  width: 100vw;
+  height: 4em;
+  background: linear-gradient(
+    rgba(89, 193, 254, 0.2) 20%,
+    #230046 40%,
+    #320064 60%,
+    rgba(89, 193, 254, 0.2) 80%
+  );
+  background-size: 1px 0.5em;
+  box-shadow: 0 0 1em rgba(89, 193, 254, 0.4);
+  transform: translateY(-1em);
+  left: 0px;
+}
+
+h1 {
+  position: relative;
+  font-family: "Exo";
+  font-size: 9em;
+  margin: 0;
+  transform: skew(-15deg);
+  letter-spacing: 0.03em;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  top: -0.1em;
+  right: 0.05em;
+  width: 0.4em;
+  height: 0.4em;
+  background: radial-gradient(
+      white 3%,
+      rgba(255, 255, 255, 0.3) 15%,
+      rgba(255, 255, 255, 0.05) 60%,
+      transparent 80%
+    ),
+    radial-gradient(rgba(255, 255, 255, 0.2) 50%, transparent 60%) 50% 50%/5%
+      100%,
+    radial-gradient(rgba(255, 255, 255, 0.2) 50%, transparent 60%) 50% 50%/70%
+      5%;
+  background-repeat: no-repeat;
+}
+h1 span:first-child {
+  position: relative;
+  left: 625px;
+  display: block;
+  text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black, 0 0 5em #0750e2;
+  -webkit-text-stroke: 0.06em rgba(0, 0, 0, 0.5);
+}
+h1 span:last-child {
+  position: absolute;
+  left: 625px;
+  top: 0;
+  background-image: linear-gradient(
+    #230046 25%,
+    #320064 35%,
+    white 50%,
+    #000000 50%,
+    #141414 55%,
+    #282828 75%
+  );
+  -webkit-text-stroke: 0.01em #94a0b9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: "Mr Dafoe";
+  margin: 0;
+  font-size: 5.5em;
+  margin-top: -0.6em;
+  color: white;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+  transform: rotate(-7deg);
+}
+
+.grid {
+  background: linear-gradient(
+      transparent 65%,
+      #230046 75%,
+      #320064 80%,
+      #230046 85%,
+      transparent 95%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 65%,
+      #230046 75%,
+      #320064 80%,
+      #230046 85%,
+      transparent 95%
+    );
+  background-size: 30px 30px;
+  width: 200vw;
+  height: 300vh;
+  position: absolute;
+  bottom: -120vh;
+  transform: rotateX(-100deg);
+  -webkit-mask-image: linear-gradient(black, rgba(0, 0, 0, 0) 80%);
+}
+
+.heading {
+  font: 700 2.5vw/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: 0.25em 0 0.325em;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  color: white;
+  top: 200px;
+  left: -84%;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 480px) {
+  .lines {
+    width: 142vw;
+    height: 7em;
+    position: relative;
+    left: -20px;
+  }
+  .grid {
+    background-size: 17px 36px;
+    width: 200vw;
+    height: 194vh;
+  }
+  h1 span:first-child {
+    position: relative;
+    left: 100px;
+    top: 30px;
+  }
+  h1 span:last-child {
+    position: absolute;
+    left: 100px;
+    top: 30px;
+  }
+  .topics {
+    display: block;
+    position: relative;
+    left: 15%;
+    top: 52px;
+  }
+  .btn {
+    height: 17px;
+    width: 240px;
+  }
+  .glowing {
+    width: 240px;
+    border-radius: 8px;
+    height: 44px;
+    position: relative;
+    top: -2px;
+    left: -2px;
+  }
+  .glowing span {
+    font-size: 25px;
+    top: 2px;
+    animation: unset;
+  }
+  .heading {
+    position: relative;
+    top: -45px;
+    left: 0%;
+    font-size: 9vw;
+  }
+  .container {
+    position: relative;
+    top: 145px;
+    left: 1%;
+  }
+  .accordion-item:target {
+    animation: none;
+  }
+}

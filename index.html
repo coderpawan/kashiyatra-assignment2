@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f757265aaf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section>
+      <div class="grid"></div>
+      <div class="lines"></div>
+      <h1>
+        <span>FAQ</span>
+        <span>FAQ</span>
+      </h1>
+      <div class="topics">
+        <button class="btn basics" onclick="show1()">
+          <div class="glowing">
+            <span>B</span>
+            <span>A</span>
+            <span>S</span>
+            <span>I</span>
+            <span>C</span>
+            <span>S</span>
+          </div>
+        </button>
+        <button class="btn accomodation" onclick="show2()">
+          <div class="glowing">
+            <span>A</span>
+            <span>C</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>O</span>
+            <span>D</span>
+            <span>A</span>
+            <span>T</span>
+            <span>I</span>
+            <span>O</span>
+            <span>N</span>
+          </div>
+        </button>
+        <button class="btn others" onclick="show3()">
+          <div class="glowing">
+            <span>O</span>
+            <span>T</span>
+            <span>H</span>
+            <span>E</span>
+            <span>R</span>
+            <span>S</span>
+          </div>
+        </button>
+      </div>
+      <div class="container" id="part1">
+        <div class="heading effect">BASICS</div>
+        <div class="accordion">
+          <div class="accordion-item" id="question1">
+            <a class="accordion-link" href="#question1">
+              When is the next edition of Kashiyatra?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus" onclick="hide()"></i>
+            </a>
+            <div class="answer" id="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item" id="question2">
+            <a class="accordion-link" href="#question2">
+              How can I participate in Kashiyatra'20?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </a>
+            <div class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item" id="question3">
+            <a class="accordion-link" href="#question3">
+              Where should I report after reaching IIT(BHU) Varanasi?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </a>
+            <div class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item" id="question4">
+            <a class="accordion-link" href="#question4">
+              How can I be allowed to participate at a given event value?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </a>
+            <div class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="part2">
+        <div class="heading active">ACCOMODATION</div>
+        <div class="accordion">
+          <div class="accordion-item" id="question5">
+            <a class="accordion-link" href="#question5">
+              What type of accomodation would be provided?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus" onclick="hide()"></i>
+            </a>
+            <div class="answer" id="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item" id="question6">
+            <a class="accordion-link" href="#question6">
+              Few members of my team would be arriving late , what to do about
+              their accomodation?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </a>
+            <div class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item" id="question7">
+            <a class="accordion-link" href="#question7">
+              Does accomodation fee include the food facility as well?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </a>
+            <div class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item" id="question8">
+            <a class="accordion-link" href="#question8">
+              Are the ATM's available inside?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </a>
+            <div class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="part3">
+        <div class="heading">OTHERS</div>
+        <div class="accordion">
+          <div class="accordion-item" id="question9">
+            <a class="accordion-link" href="#question9">
+              What is the Artist Line-up?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus" onclick="hide()"></i>
+            </a>
+            <div class="answer" id="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item" id="question10">
+            <a class="accordion-link" href="#question10">
+              Can I take photos during Pronights?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </a>
+            <div class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item" id="question11">
+            <a class="accordion-link" href="#question11">
+              Do I have to register for Prelims and Finals Separately
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </a>
+            <div class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item" id="question12">
+            <a class="accordion-link" href="#question12">
+              What are the necessary things to carry with for entry?
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </a>
+            <div class="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                vitae, saepe tempora commodi dolorum eius omnis fuga magni at
+                dignissimos facilis laboriosam iure inventore libero maxime
+                consequuntur ea totam maiores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
